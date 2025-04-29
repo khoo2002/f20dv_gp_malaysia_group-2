@@ -1,0 +1,154 @@
+/* === General Reset and Base Layout === */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* === Front and Back Cover Page Styling === */
+.cover-page {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+
+.cover-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Keeps aspect ratio while fitting */
+}
+
+/* === Page Wrapper for Graph Pages === */
+.page {
+    width: 98vw;
+    max-width: 98vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 4px;
+    background-color: #ebebeb;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Graph Containers Centering === */
+#HeatMap1,
+#ChoroplethMap,
+#BidirectionalGraph {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#HeatMap1 svg,
+#ChoroplethMap svg,
+#BidirectionalGraph svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* === Dropdown Select Width for Choropleth === */
+#attrSelect {
+    width: 60%;
+}
+
+/* === Line Chart Layout for Multiple Charts in One Row === */
+.chart-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.line-chart {
+    width: 30%;
+}
+
+/* === Graph Quiz Section === */
+.graph-quiz-container {
+    max-width: 100vw;
+    margin: auto;
+    padding: 20px;
+}
+
+.problem-statement,
+.graph-section,
+.quiz-section {
+    margin-bottom: 20px;
+}
+
+.quiz-section h3 {
+    margin-bottom: 10px;
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.quiz-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.quiz-btn:hover {
+    background-color: #0056b3;
+}
+
+#quiz-result {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* === Description Text for Graphs === */
+.graph-description {
+    width: 80%;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    text-align: left;
+}
+
+/* === Global Box Sizing Reset === */
+* {
+    box-sizing: border-box;
+}
+
+/* Tooltip for Bidirectional Chart only */
+.bi-tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Glow effect for red and blue bars */
+.bar-glow-red {
+    filter: drop-shadow(0 0 6px crimson);
+}
+
+.bar-glow-blue {
+    filter: drop-shadow(0 0 6px royalblue);
+}

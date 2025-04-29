@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F20DV Malaysia Group 2</title>
+
+    <!-- Load D3.js library for data visualization -->
+    <script src="libs/d3/d3.v7.min.js"></script>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <!-- Front Cover Page -->
+    <div class="cover-page" id="0">
+        <img src="data/images/front_cover.png" alt="Cover Image" class="cover-image">
+    </div>
+
+    <!-- Page 1: Heatmap visualization -->
+    <div class="page" id="1">
+        <div id="problem-1"></div> <!-- Placeholder for problem statement and quiz -->
+        <div id="HeatMap1"></div> <!-- Heatmap visualization container -->
+    </div>
+
+    <!-- Page 2: Scatter Plot visualization -->
+    <div class="page" id="2">
+        <div id="problem-2"></div> <!-- Placeholder for problem statement and quiz -->
+        <div id="scatter-plot"></div> <!-- Scatter plot visualization container -->
+    </div>
+
+    <!-- Page 3: Dual Perspective Graph (Bar Chart & Heatmap) -->
+    <div class="page" id="3">
+        <div id="problem-3"></div> <!-- Placeholder for problem statement and quiz -->
+        <div id="DualPerspectiveGraph"></div> <!-- Dual Perspective visualization container -->
+    </div>
+
+    <!-- Page 3: Bidirectional Graph -->
+    <div class="page" id="4">
+        <div id="problem-4"></div> <!-- Placeholder for problem statement and quiz -->
+        <div id="BidirectionalGraph"></div> <!-- Dual Perspective visualization container -->
+    </div>
+
+    <!-- Page 4: Line Charts for Fatalities, Accidents, and Investments -->
+    <div class="page" id="5">
+        <div id="problem-5"></div> <!-- Placeholder for problem statement and quiz -->
+
+        <!-- Dropdown for selecting country -->
+        <label for="country-select">Select Country:</label>
+        <select id="country-select">
+            <option value="Overall">Overall</option>
+        </select>
+
+        <!-- Container for multiple line charts -->
+        <div class="chart-container">
+            <div id="fatalities-chart" class="line-chart"></div> <!-- Fatalities Line Chart -->
+            <div id="accidents-chart" class="line-chart"></div> <!-- Accidents Line Chart -->
+            <div id="investment-chart" class="line-chart"></div> <!-- Investment Line Chart -->
+        </div>
+    </div>
+
+    <!-- Page 5: Choropleth Map for Geographic Analysis -->
+    <div class="page" id="6">
+        <div id="problem-6"></div> <!-- Placeholder for problem statement and quiz -->
+        <div id="ChoroplethMap"></div> <!-- Choropleth map visualization container -->
+    </div>
+
+    <!-- Back Cover Page -->
+    <div class="cover-page" id="0">
+        <img src="data/images/back_cover.png" alt="Cover Image" class="cover-image">
+    </div>
+
+    <!-- Load JavaScript file to execute visualization scripts -->
+    <script type="module" src="scripts/main.js"></script>
+
+</body>
+
+</html>
